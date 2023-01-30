@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video src="frozen.mp4" width="400" height="200" id="vid">
+    </video><br>
+    <input type="range" min="0" value="0" style="width: 400px;" id="vid_range"><br>
+    <button onclick="vid.play()">Play</button>
+    <button onclick="vid.pause()">Stop</button>
+    <button onclick="getBackMore()">&lt;&lt;</button>
+    <button onclick="getBack()">&lt;</button>
+    <button onclick="getForward()">&gt;</button>
+    <button onclick="getForwardMore()">&gt;&gt;</button>
+
+    <input type="range" min="0" max="1" step ="0.1" value="0.5"  id="volume_range">
+    <button onclick="getVolumeMute()">mute</button><br>
+    speed
+    <input type="range" min="0.5" step ="0.5" max="16" value="0.5"  id="speed_range">
+    <button onclick="getFullScreen()">Fullscreen</button>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

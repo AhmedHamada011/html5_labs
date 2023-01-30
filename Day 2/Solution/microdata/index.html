@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microdata</title>
+</head>
+<body>
+  
+  <!-- with schema.org -->
+  <div itemscope itemtype="https://schema.org/Organization">
+    <h2 itemprop="name">SD & Gaming CoE, ITI.</h2>
+    <h2 itemprop="telephone">35355695</h2>
+    <h2 itemprop="url">http://www.iti.gov.eg/</h2>
+      <div itemprop="address" itemscope >
+        <span itemprop="streetAddress">km 28 Cairo-Alexandria Desert Road</span>
+        <span itemprop="addressLocality">Smart Village</span>
+        <span itemprop="addressRegion">Giza</span>
+        <span itemprop="postalCode">11371</span>
+      </div>
+      <div itemprop="location" itemscope itemtype="https://schema.org/Place">
+        <span itemprop="latitude">30.3523 N</span>
+        <span itemprop="longitude">77.0040 W</span>
+      </div>
+    </div>
+
+    <!-- with  data-vocabulary.org -->
+    <div itemscope itemtype="http://data-vocabulary.org/Organization">
+      <h2 itemprop="name">SD & Gaming CoE, ITI.</h2>
+      <h2 itemprop="telephone">35355695</h2>
+      <h2 itemprop="url">http://www.iti.gov.eg/</h2>
+      <div itemprop="address" itemscope itemtype="http://data-vocabulary.org/address">
+          <span itemprop="streetAddress">km 28 Cairo-Alexandria Desert Road</span>
+          <span itemprop="addressLocality">Smart Village</span>
+          <span itemprop="addressRegion">Giza</span>
+          <span itemprop="postalCode">11371</span>
+        </div>
+        <div itemprop="geo" itemscope itemtype="http://data-vocabulary.org/geo">
+          <span itemprop="latitude">30.3523 N</span>
+          <span itemprop="longitude">77.0040 W</span>
+        </div>
+      </div>
+
+</body>
+</html>

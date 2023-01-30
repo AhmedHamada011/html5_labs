@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+      #username,#email{
+        outline: none;
+      }
+      #username:invalid,#email:invalid{
+        border-color: red;
+        content:"SDsdsdsd"
+      }
+      small{
+        display: none;
+      }
+
+      #username:invalid + #error-username{
+        display: block;
+      }
+
+      #username:valid + #error-username{
+        color:red;
+        display: none;
+      }
+
+
+      #email:invalid + #error-email{
+        display: block;
+      }
+      
+      #email:valid + #error-email{
+        color:red;
+        display: none;
+      }
+
+      #username:valid,#email:valid{
+        border-color: green;
+      }
+    </style>
+</head>
+<body>
+      <div class="container mt-5">
+        <form>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control shadow-none" id="username" placeholder="username" pattern="[A-Za-z]{5}" required>
+            <small id="error-username" class="form-text text-muted">Please use only 5 alpah characters.</small>
+
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control shadow-none" id="email" placeholder="email" required>
+            <small id="error-email" class="form-text text-muted">Please use valid email emaple@test.com.</small>
+
+          </div>
+          <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    
+      </div>
+</body>
+</html>
